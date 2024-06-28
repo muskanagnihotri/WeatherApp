@@ -54,5 +54,8 @@ function getWeatherConditionLabel(condition) {
         return 'Sunlight';
     }
 }
+<<<<<<< manishajoshi
+=======
 
 
+>>>>>>> muskan
