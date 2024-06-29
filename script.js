@@ -51,11 +51,6 @@ function getWeatherConditionLabel(condition) {
     } else if (condition.includes('snow')) {
         return 'Snowy';
     } else {
-        return 'Sunlight';
+        return 'Normal';
     }
 }
-<<<<<<< manishajoshi
-=======
-
-
->>>>>>> muskan
