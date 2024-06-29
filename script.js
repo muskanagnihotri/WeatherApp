@@ -38,7 +38,6 @@ function updateWeatherInfo(data) {
 }
 
 function getWeatherConditionLabel(condition) {
-    condition = condition.toLowerCase();
 
     if (condition.includes('clear')) {
         return 'Clear';
