@@ -36,7 +36,7 @@ function updateWeatherInfo(data) {
     document.getElementById('weather-description').innerText = `Weather: ${weatherDescription}`;
     document.getElementById('weather-main').innerText = `Condition: ${getWeatherConditionLabel(weatherMain)}`;
 
-    updateBackground(weatherMain.toLowerCase());
+    
 }
 
 function getWeatherConditionLabel(condition) {
