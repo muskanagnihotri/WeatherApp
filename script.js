@@ -1,5 +1,5 @@
 document.getElementById('search-btn').addEventListener('click', function() {
-    var city = document.getElementById('city-input').value;
+    let city = document.getElementById('city-input').value;
     if (city) {
         getWeatherData(city);
     } else {
@@ -8,9 +8,9 @@ document.getElementById('search-btn').addEventListener('click', function() {
 });
 
 function getWeatherData(city) {
-    var xhr = new XMLHttpRequest();
-    var apiKey = 'a89fee4e8304fdb8230088bc61b6fe4b'; // Replace with your OpenWeatherMap API key
-    var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    let xhr = new XMLHttpRequest();
+    let apiKey = 'a89fee4e8304fdb8230088bc61b6fe4b'; // Replace with your OpenWeatherMap API key
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
     xhr.open('GET', url, true);
     xhr.onreadystatechange = function() {
@@ -26,10 +26,10 @@ function getWeatherData(city) {
     xhr.send();
 }
 function updateWeatherInfo(data) {
-    var cityName = data.name;
-    var temperature = data.main.temp;
-    var weatherDescription = data.weather[0].description;
-    var weatherMain = data.weather[0].main;
+    let cityName = data.name;
+    let temperature = data.main.temp;
+    let weatherDescription = data.weather[0].description;
+    let weatherMain = data.weather[0].main;
 
     document.getElementById('city-name').innerText = cityName;
     document.getElementById('temperature').innerText = `Temperature: ${temperature}°C`;
