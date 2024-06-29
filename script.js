@@ -14,14 +14,12 @@ function getWeatherData(city) {
 
     xhr.open('GET', url, true);
     xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
             if (xhr.status == 200) {
                 var data = JSON.parse(xhr.responseText);
                 updateWeatherInfo(data);
             } else {
                 alert("Could not retrieve weather data. Please try again.");
             }
-        }
     };
     xhr.send();
 }
